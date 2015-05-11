@@ -1,8 +1,25 @@
 import random as rand
 
-start = rand.randint(1,10)
-left = rand.randint(1,20)
-right = rand.randint(1,20)
+class Start:
+	
+	def __init__(self):
+		self.start = rand.randint(1,10)
+		self.left = rand.randint(1,20)
+		self.right = rand.randint(1,20)
 
-g = [0,0,0,0,0,0,0,0,0,0,0]
-map = [g,g,g,g,g,g,g,g,g,g,g]
+class Passage:
+
+	def __init__(self):
+		self.path = rand.randint(1,20)
+
+class Door:
+	material = rand.randint(1,20)
+	beyond = rand.randint(1,20)
+
+class Chamber:
+	types = rand.randint(1,20)
+	exits = rand.randint(1,20)
+
+class Display:
+	g = [0,0,0,0,0,0,0,0,0,0,0]
+	mapg = [g,g,g,g,g,g,g,g,g,g,g]
